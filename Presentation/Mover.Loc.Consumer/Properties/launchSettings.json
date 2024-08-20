@@ -1,0 +1,22 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Mottu.Loc.Consumer": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "DOTNET_USE_POLLING_FILE_WATCHER": "true",
+        "MONGO_CONN": "mongodb+srv://sa:Nasci2205!@clusterdefault.02i9q8e.mongodb.net/?retryWrites=true&w=majority&appName=ClusterDefault",
+        "MONGO_DBNAME": "mottu_loc_2024",
+        "MONGO_SASL": "false",
+        "RBT_HOST": "jackal-01.rmq.cloudamqp.com",
+        "RBT_PORT": "5672",
+        "RBT_USER": "jakyoloy",
+        "RBT_PWD": "Da67wq9I0nrJQ2gCYLFYfZAWwZU0A_OK",
+        "RBT_VIRTUAL_HOST": "jakyoloy",
+        "RBT_MOTOR_ADD": "send-add-motor"
+      }
+    }
+  }
+}
