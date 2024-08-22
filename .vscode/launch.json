@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Presentation/Mottu.Loc.Api/bin/Debug/net8.0/Mottu.Loc.Api.dll",
+            "program": "${workspaceFolder}/Presentation/Mover.Loc.Api/bin/Debug/net8.0/Mover.Loc.Api.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -23,7 +23,7 @@
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
             },
-            "launchSettingsFilePath": "${workspaceFolder}/Presentation/Mottu.Loc.Api/Properties/launchSettings.json",
+            "launchSettingsFilePath": "${workspaceFolder}/Presentation/Mover.Loc.Api/Properties/launchSettings.json",
             "launchSettingsProfile": "Local"
         },
     ]

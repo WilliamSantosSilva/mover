@@ -1,0 +1,56 @@
+services:
+#TODO: Resolver o problema da conn não funcionar dentro do docker
+    mover_api:
+        container_name: mover_api
+        build: .
+        ports:
+            - "8083:5003"
+        depends_on:
+            - rabbitmq
+            - mongodbLocal
+        networks:
+            - iet-network
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:5003
+            - DOTNET_USE_POLLING_FILE_WATCHER=1
+            - ASPNETCORE_PROFILING=1
+            - DOTNET_GENERATE_ASPNET_CERTIFICATE=false
+            - MONGO_CONN="mongodb://sa:Nasci2205!@mongodbLocal:27017/Mover"
+            - MONGO_DBNAME="Mover"
+            - MONGO_SASL=false
+            - LOG_TYPE="1"
+            - MONGO_DBNAME_LOG="mongodb://sa:Nasci2205!@mongodbLocal:27017/applicationLog"
+            - RBT_HOST="rabbitmq"
+            - RBT_PORT="5672"
+            - RBT_USER="guest"
+            - RBT_PWD="guest"
+            - RBT_VIRTUAL_HOST="/",
+            - RBT_MOTOR_ADD="send-add-motor"
+    mongodbLocal:
+        image: mongo
+        container_name: mongodbLocal
+        ports:
+            - "27017:27017"
+        networks:
+            - iet-network
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: sa
+            MONGO_INITDB_ROOT_PASSWORD: Nasci2205!
+        volumes:
+            - mongo-data:/data/db
+            # - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    rabbitmq:
+        image: rabbitmq:3-management
+        container_name: rabbitmq
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        networks:
+            - iet-network
+volumes:
+  mongo-data:
+  
+networks:
+    iet-network:
+        driver: bridge

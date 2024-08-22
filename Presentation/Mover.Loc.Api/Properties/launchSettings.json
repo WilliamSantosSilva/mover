@@ -18,7 +18,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DOTNET_USE_POLLING_FILE_WATCHER": "true",
-        "MONGO_CONN": "mongodb+srv://sa:Nasci2205!@clusterdefault.02i9q8e.mongodb.net/?retryWrites=true&w=majority&appName=ClusterDefault",
+        "MONGO_CONN": "mongodb://sa:Nasci2205!@localhost/?retryWrites=true&w=majority&appName=ClusterDefault",
         "MONGO_DBNAME": "mottu_loc",
         "MONGO_SASL": "false",
         "RBT_HOST": "jackal-01.rmq.cloudamqp.com",
@@ -27,7 +27,7 @@
         "RBT_PWD": "Da67wq9I0nrJQ2gCYLFYfZAWwZU0A_OK",
         "RBT_VIRTUAL_HOST": "jakyoloy",
         "RBT_MOTOR_ADD": "send-add-motor",
-        "MONGO_DBNAME_LOG": "mongodb+srv://sa:Nasci2205!@clusterdefault.02i9q8e.mongodb.net/applicationLog"
+        "MONGO_DBNAME_LOG": "mongodb://sa:Nasci2205!@localhost/applicationLog"
       }
     }
   }
